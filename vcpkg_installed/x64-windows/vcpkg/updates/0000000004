@@ -1,8 +1,10 @@
-Package: sdl2
-Version: 2.30.7
-Depends: vcpkg-cmake:arm64-windows, vcpkg-cmake-config:arm64-windows
+Package: bzip2
+Version: 1.0.8
+Port-Version: 6
+Depends: vcpkg-cmake:arm64-windows
 Architecture: x64-windows
 Multi-Arch: same
-Abi: 92e8a8005fd00a1c5669bf40b544ae5993a2bb0616f641c9fd63161bbce14353
-Description: Simple DirectMedia Layer is a cross-platform development library designed to provide low level access to audio, keyboard, mouse, joystick, and graphics hardware via OpenGL and Direct3D.
+Abi: 0fd3c758c54a860acf25e5d2e38d1620956bb7f0808460f07e359a9c2cf66fd2
+Description: bzip2 is a freely available, patent free, high-quality data compressor. It typically compresses files to within 10% to 15% of the best available techniques (the PPM family of statistical compressors), whilst being around twice as fast at compression and six times faster at decompression.
+Default-Features: tool
 Status: install ok half-installed

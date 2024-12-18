@@ -1,8 +1,6 @@
-Package: sdl2
-Version: 2.30.7
-Depends: vcpkg-cmake:arm64-windows, vcpkg-cmake-config:arm64-windows
+Package: bzip2
+Feature: tool
 Architecture: x64-windows
 Multi-Arch: same
-Abi: 92e8a8005fd00a1c5669bf40b544ae5993a2bb0616f641c9fd63161bbce14353
-Description: Simple DirectMedia Layer is a cross-platform development library designed to provide low level access to audio, keyboard, mouse, joystick, and graphics hardware via OpenGL and Direct3D.
-Status: install ok installed
+Description: Builds bzip2 executable
+Status: install ok half-installed

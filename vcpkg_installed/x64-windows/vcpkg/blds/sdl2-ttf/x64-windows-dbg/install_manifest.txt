@@ -1,0 +1,9 @@
+C:/Users/doqin/source/repos/GameEngine/vcpkg_installed/x64-windows/vcpkg/pkgs/sdl2-ttf_x64-windows/debug/lib/SDL2_ttfd.lib
+C:/Users/doqin/source/repos/GameEngine/vcpkg_installed/x64-windows/vcpkg/pkgs/sdl2-ttf_x64-windows/debug/bin/SDL2_ttfd.dll
+C:/Users/doqin/source/repos/GameEngine/vcpkg_installed/x64-windows/vcpkg/pkgs/sdl2-ttf_x64-windows/debug/include/SDL2/SDL_ttf.h
+C:/Users/doqin/source/repos/GameEngine/vcpkg_installed/x64-windows/vcpkg/pkgs/sdl2-ttf_x64-windows/debug/cmake/SDL2_ttfConfig.cmake
+C:/Users/doqin/source/repos/GameEngine/vcpkg_installed/x64-windows/vcpkg/pkgs/sdl2-ttf_x64-windows/debug/cmake/SDL2_ttfConfigVersion.cmake
+C:/Users/doqin/source/repos/GameEngine/vcpkg_installed/x64-windows/vcpkg/pkgs/sdl2-ttf_x64-windows/debug/cmake/SDL2_ttf-shared-targets.cmake
+C:/Users/doqin/source/repos/GameEngine/vcpkg_installed/x64-windows/vcpkg/pkgs/sdl2-ttf_x64-windows/debug/cmake/SDL2_ttf-shared-targets-debug.cmake
+C:/Users/doqin/source/repos/GameEngine/vcpkg_installed/x64-windows/vcpkg/pkgs/sdl2-ttf_x64-windows/debug/lib/pkgconfig/SDL2_ttf.pc
+C:/Users/doqin/source/repos/GameEngine/vcpkg_installed/x64-windows/vcpkg/pkgs/sdl2-ttf_x64-windows/debug/share/licenses/SDL2_ttf/LICENSE.txt

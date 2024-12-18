@@ -134,6 +134,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -189,17 +190,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Game.cpp" />
-    <ClCompile Include="GameEngine.cpp" />
-    <ClCompile Include="Main.cpp" />
-    <ClCompile Include="MainMenuScreen.cpp" />
+    <ClCompile Include="Source\Game.cpp" />
+    <ClCompile Include="Source\GameEngine.cpp" />
+    <ClCompile Include="Source\Main.cpp" />
+    <ClCompile Include="Source\MainMenuScreen.cpp" />
+    <ClCompile Include="Source\Text.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Game.h" />
-    <ClInclude Include="GameEngine.h" />
-    <ClInclude Include="GameScreen.h" />
-    <ClInclude Include="GameStage.h" />
-    <ClInclude Include="MainMenuScreen.h" />
+    <ClInclude Include="Source\Game.h" />
+    <ClInclude Include="Source\GameEngine.h" />
+    <ClInclude Include="Source\GameScreen.h" />
+    <ClInclude Include="Source\GameStage.h" />
+    <ClInclude Include="Source\MainMenuScreen.h" />
+    <ClInclude Include="Source\Text.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
