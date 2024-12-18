@@ -32,7 +32,6 @@ public:
     void Update() const;
     bool CheckCollision(const BoxCollider2D* collider) const;
     bool CheckCollision(const BoundaryCollider2D* boundaryCollider) const;
-private:
-	bool isCollided;
+    bool isCollided;
 };
 

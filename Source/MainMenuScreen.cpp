@@ -57,7 +57,12 @@ void MainMenuScreen::Draw()
 
 	title.render(game->renderer, 400 - title.getWidth() / 2, 100);
 	play.render(game->renderer, playButton.x - play.getWidth() / 4, playButton.y - play.getHeight() / 2, play.getWidth() / 2, play.getHeight() / 2);
-	SDL_SetRenderDrawColor(game->renderer, 255, 0, 0, 255);
+	if (button.isCollided) {
+		SDL_SetRenderDrawColor(game->renderer, 0, 255, 0, 255);
+	}
+	else {
+		SDL_SetRenderDrawColor(game->renderer, 255, 0, 0, 255);
+	}
 	SDL_RenderDrawRect(game->renderer, button.boxCollider);
 
 	SDL_RenderPresent(game->renderer);
