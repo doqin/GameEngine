@@ -190,6 +190,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Source\BoundaryCollider2D.cpp" />
+    <ClCompile Include="Source\BoxCollider2D.cpp" />
     <ClCompile Include="Source\Game.cpp" />
     <ClCompile Include="Source\GameEngine.cpp" />
     <ClCompile Include="Source\Main.cpp" />
@@ -197,12 +199,17 @@
     <ClCompile Include="Source\Text.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Source\Point2D.h" />
+    <ClInclude Include="Source\BoundaryCollider2D.h" />
+    <ClInclude Include="Source\GameObject.h" />
+    <ClInclude Include="Source\BoxCollider2D.h" />
     <ClInclude Include="Source\Game.h" />
     <ClInclude Include="Source\GameEngine.h" />
     <ClInclude Include="Source\GameScreen.h" />
     <ClInclude Include="Source\GameStage.h" />
     <ClInclude Include="Source\MainMenuScreen.h" />
     <ClInclude Include="Source\Text.h" />
+    <ClInclude Include="Source\Vector2D.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

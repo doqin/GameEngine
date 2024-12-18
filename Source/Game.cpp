@@ -12,7 +12,7 @@ void Game::Init(const char* title, int width, int height, bool fullscreen)
 	}
 	if (SDL_Init(SDL_INIT_EVERYTHING) == 0) {
 		screen = SDL_CreateWindow(title, SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, mWidth, mHeight, flags);
-		renderer = SDL_CreateRenderer(screen, -1, 0);
+		renderer = SDL_CreateRenderer(screen, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
 		if (renderer) {
 			SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
 		}
@@ -31,7 +31,7 @@ void Game::Init(const char* title, int width, int height, bool fullscreen)
 		mRunning = false;
 	}
 
-	gFont = TTF_OpenFont("Assets/Fonts/JMH Typewriter.ttf", 14);
+	gFont = TTF_OpenFont("Assets/Fonts/JMH Typewriter.ttf", 64);
 	if (gFont == NULL) {
 		printf("TTF_OpenFont Error: %s\n", TTF_GetError());
 		mRunning = false;

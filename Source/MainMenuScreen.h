@@ -1,4 +1,6 @@
 #pragma once
+#include "GameObject.h"
+#include "BoxCollider2D.h"
 #include "GameScreen.h"
 #include "Game.h"
 #include "Text.h"
@@ -8,6 +10,8 @@ public:
 	Game* game;
 	Text title;
 	Text play;
+	GameObject playButton;
+	BoxCollider2D button;
 	MainMenuScreen(Game* game);
 	void Cleanup() override;
 	void Init() override;
