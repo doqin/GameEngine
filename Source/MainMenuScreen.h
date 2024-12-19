@@ -22,5 +22,7 @@ public:
 	void Update() override;
 	void Draw() override;
 	void ChangeStage(GameStage* stage) override;
+private:
+	std::vector<GameStage*> stages;
 };
 

@@ -1,0 +1,6 @@
+C:/Users/doqin/source/repos/GameEngine/vcpkg_installed/x64-windows/vcpkg/blds/sdl2-image/x64-windows-dbg/CMakeFiles/SDL2_image.dir
+C:/Users/doqin/source/repos/GameEngine/vcpkg_installed/x64-windows/vcpkg/blds/sdl2-image/x64-windows-dbg/CMakeFiles/edit_cache.dir
+C:/Users/doqin/source/repos/GameEngine/vcpkg_installed/x64-windows/vcpkg/blds/sdl2-image/x64-windows-dbg/CMakeFiles/rebuild_cache.dir
+C:/Users/doqin/source/repos/GameEngine/vcpkg_installed/x64-windows/vcpkg/blds/sdl2-image/x64-windows-dbg/CMakeFiles/list_install_components.dir
+C:/Users/doqin/source/repos/GameEngine/vcpkg_installed/x64-windows/vcpkg/blds/sdl2-image/x64-windows-dbg/CMakeFiles/install.dir
+C:/Users/doqin/source/repos/GameEngine/vcpkg_installed/x64-windows/vcpkg/blds/sdl2-image/x64-windows-dbg/CMakeFiles/install/local.dir

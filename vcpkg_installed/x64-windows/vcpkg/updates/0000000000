@@ -1,8 +1,9 @@
-Package: zlib
-Version: 1.3.1
-Depends: vcpkg-cmake:arm64-windows
+Package: sdl2-image
+Version: 2.8.2
+Port-Version: 2
+Depends: libpng, sdl2, vcpkg-cmake:arm64-windows, vcpkg-cmake-config:arm64-windows
 Architecture: x64-windows
 Multi-Arch: same
-Abi: c04340afebb6d37209ce7d652b264711fbd9e5d68a9ec81d9e3ef1b62ae689b2
-Description: A compression library
+Abi: 4645d5b6e9c39f2c1f088bb9c19ce38f507b25cb1c7ae7ded35abfe815a0396e
+Description: SDL_image is an image file loading library. It loads images as SDL surfaces and textures, and supports the following formats: BMP, GIF, JPEG, LBM, PCX, PNG, PNM, TGA, TIFF, WEBP, XCF, XPM, XV
 Status: install ok half-installed

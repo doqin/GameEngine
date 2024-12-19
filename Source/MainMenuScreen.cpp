@@ -1,4 +1,5 @@
 #include "MainMenuScreen.h"
+#include "GameplayScreen.h"
 #include "BoxCollider2D.h"
 #include "GameObject.h"
 
@@ -37,7 +38,7 @@ void MainMenuScreen::HandleEvents()
 			game->Quit();
 		}
 		if (button.IsClicked(e)) {
-			game->Quit();
+			game->ChangeScreen(new GameplayScreen(game));
 		}
 	}
 }
@@ -70,4 +71,9 @@ void MainMenuScreen::Draw()
 
 void MainMenuScreen::ChangeStage(GameStage* stage)
 {
+	if (!stages.empty()) {
+		stages.back()->Cleanup();
+		stages.pop_back();
+	}
+	stages.push_back(stage);
 }

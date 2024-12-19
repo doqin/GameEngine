@@ -1,0 +1,25 @@
+# ninja log v6
+26	105	7562155307253317	CMakeFiles/SDL2_image.dir/src/IMG_WIC.c.obj	eb9585200ad65b5a
+41	331	7562155307333887	CMakeFiles/SDL2_image.dir/src/IMG_avif.c.obj	18981bb6fc4576de
+17	348	7562155307091991	CMakeFiles/SDL2_image.dir/src/IMG.c.obj	b9671ab0c1a3a011
+108	361	7562155308024565	CMakeFiles/SDL2_image.dir/src/IMG_jpg.c.obj	51020abd9e6ecedb
+49	401	7562155307424426	CMakeFiles/SDL2_image.dir/src/IMG_bmp.c.obj	ee2aadd1b8106d1
+58	414	7562155307512087	CMakeFiles/SDL2_image.dir/src/IMG_gif.c.obj	c96e1aae06594a99
+333	569	7562155310245990	CMakeFiles/SDL2_image.dir/src/IMG_jxl.c.obj	c265c4beb02347a6
+362	588	7562155310544027	CMakeFiles/SDL2_image.dir/src/IMG_pcx.c.obj	4e0c8f86a9ab935d
+402	636	7562155310939727	CMakeFiles/SDL2_image.dir/src/IMG_png.c.obj	1081677959b4f16c
+589	756	7562155312814700	CMakeFiles/SDL2_image.dir/src/IMG_stb.c.obj	28eef6efd979099c
+414	771	7562155311083016	CMakeFiles/SDL2_image.dir/src/IMG_pnm.c.obj	4a804661781d6b73
+348	784	7562155310406610	CMakeFiles/SDL2_image.dir/src/IMG_lbm.c.obj	f60a61714474207a
+570	797	7562155312636271	CMakeFiles/SDL2_image.dir/src/IMG_qoi.c.obj	3f9c464b40c53edc
+784	1041	7562155314781484	CMakeFiles/SDL2_image.dir/src/IMG_webp.c.obj	2dbc96f13b27c7d6
+771	1066	7562155314646420	CMakeFiles/SDL2_image.dir/src/IMG_tif.c.obj	fe1bae734a1f982d
+757	1108	7562155314508097	CMakeFiles/SDL2_image.dir/src/IMG_tga.c.obj	e7d07145735f948b
+797	1327	7562155314902221	CMakeFiles/SDL2_image.dir/src/IMG_xcf.c.obj	fe54b0263f528f98
+637	1409	7562155313284573	CMakeFiles/SDL2_image.dir/src/IMG_svg.c.obj	d8f9fd1bc3c1f3ba
+1041	1438	7562155317346315	CMakeFiles/SDL2_image.dir/src/IMG_xpm.c.obj	9c4a5f6602a774ee
+1109	1487	7562155318020475	CMakeFiles/SDL2_image.dir/src/version.rc.res	98ed36740682ddd9
+1067	1507	7562155317604878	CMakeFiles/SDL2_image.dir/src/IMG_xv.c.obj	4eb052727f861a2e
+1507	1739	7562155323992525	SDL2_image.dll	d2ccb189c8af75fa
+1507	1739	7562155323992525	SDL2_image.lib	d2ccb189c8af75fa
+1741	1949	7562155324333145	CMakeFiles/install.util	2c880154b7e74d27
