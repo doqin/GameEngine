@@ -3,6 +3,7 @@
 #include "BoundaryCollider2D.h"
 #include "BoxCollider2D.h"
 #include "GameObject.h"
+#include "ScreenRepresentation.h"
 
 void PlayerController::HandleEvents(const SDL_Event& e) {
     switch (e.type) {
@@ -72,14 +73,21 @@ void PlayerController::HandleEvents(const SDL_Event& e, RigidBody2D* rigidBody) 
 }
 
 void PlayerController::Update(const std::vector<BoundaryCollider2D*>& boundaryColliders, std::vector<BoxCollider2D*>& boxColliders) {
-    player->x += xDir;
+    player->entity->x += xDir;
+    if (xDir > 0) {
+        player->flipped = false;
+    }
+    else if (xDir < 0) {
+        player->flipped = true;
+    }
     if (boxCollider) {
         boxCollider->Update();
         for (const BoxCollider2D* collider : boxColliders) {
-            if (boxCollider->CheckCollision(collider)) {
-                this->RollBack(collider->boxCollider->x, collider->boxCollider->w);
-                boxCollider->Update();
-            }
+            if (collider != boxCollider)
+                if (boxCollider->CheckCollision(collider)) {
+                    this->RollBack(collider->boxCollider->x, collider->boxCollider->w);
+                    boxCollider->Update();
+                }
         }
     }
     else if (circleCollider) {
@@ -95,7 +103,7 @@ void PlayerController::Update(const std::vector<BoundaryCollider2D*>& boundaryCo
 
 void PlayerController::RollBack(float x, float width) {
     if (xDir > 0)
-        player->x = x - (width / 2.0 + circleCollider->radius);
+        player->entity->x = x - (width / 2.0 + circleCollider->radius);
     else if (xDir < 0)
-        player->x = x + (width / 2.0 + circleCollider->radius);
+        player->entity->x = x + (width / 2.0 + circleCollider->radius);
 }

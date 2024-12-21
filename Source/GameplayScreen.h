@@ -20,6 +20,7 @@ public:
 	// Camera
 	SDL_Rect camera = { 0, 0, 800, 600 };
 	GameplayScreen(Game* game);
+
 	// Inherited via GameScreen
 	void Cleanup() override;
 	void Init() override;
@@ -30,6 +31,8 @@ public:
 	void Update() override;
 	void Draw() override;
 	void ChangeStage(GameStage* stage) override;
+
+	// Game components
 	std::vector<ScreenRepresentation*> entities;
 	std::vector<PlayerController*> controllers;
 	std::vector<BoxCollider2D*> boxColliders;
