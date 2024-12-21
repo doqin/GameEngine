@@ -10,10 +10,10 @@ void PlayerController::HandleEvents(const SDL_Event& e) {
         if (e.key.repeat == 0)
             switch (e.key.keysym.sym) {
             case SDLK_LEFT:
-                xDir -= 1;
+                xDir -= 1 * speed;
                 break;
             case SDLK_RIGHT:
-                xDir += 1;
+                xDir += 1 * speed;
                 break;
             default:
                 break;
@@ -23,10 +23,10 @@ void PlayerController::HandleEvents(const SDL_Event& e) {
         if (e.key.repeat == 0)
             switch (e.key.keysym.sym) {
             case SDLK_LEFT:
-                xDir += 1;
+                xDir += 1 * speed;
                 break;
             case SDLK_RIGHT:
-                xDir -= 1;
+                xDir -= 1 * speed;
                 break;
             default:
                 break;

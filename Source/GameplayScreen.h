@@ -32,6 +32,8 @@ public:
 	void ChangeStage(GameStage* stage) override;
 	std::vector<ScreenRepresentation*> entities;
 	std::vector<PlayerController*> controllers;
+	std::vector<BoxCollider2D*> boxColliders;
+	std::vector<BoundaryCollider2D*> boundaryColliders;
 private:
 	std::vector<GameStage*> stages;
 };

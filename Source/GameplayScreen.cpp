@@ -1,6 +1,7 @@
 #include "GameplayScreen.h"
 #include "SandBoxStage.h"
-
+#include "Vector2D.h"
+#include "BoundaryCollider2D.h"
 GameplayScreen::GameplayScreen(Game* game) 
 {
 	this->game = game;
@@ -13,6 +14,18 @@ void GameplayScreen::Cleanup()
 		stages.pop_back();
 	}
 	playerSprite.free();
+	for (auto entity : entities) {
+		delete entity;
+	}
+	entities.clear();
+	for (auto controller : controllers) {
+		delete controller;
+	}
+	controllers.clear();
+	for (auto collider : boxColliders) {
+		delete collider;
+	}
+	boxColliders.clear();
 }
 
 void GameplayScreen::Init()
@@ -23,8 +36,8 @@ void GameplayScreen::Init()
 	playerCollider = BoxCollider2D(&player, player.x, player.y, playerSprite.getWidth(), playerSprite.getHeight());
 	playerController = PlayerController(&player, nullptr, &playerCollider, 5, 10);
 	controllers.push_back(&playerController);
-	
-
+	boxColliders.push_back(&playerCollider);
+    boundaryColliders.push_back(new BoundaryCollider2D(350, 500, Vector2D(0, 1)));
 	this->ChangeStage(new SandBoxStage(this));
 }
 
@@ -66,4 +79,5 @@ void GameplayScreen::ChangeStage(GameStage* stage)
 	}
 	stages.push_back(stage);
 	stages.back()->Init();
+
 }
