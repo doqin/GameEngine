@@ -1,6 +1,7 @@
 #include "GameplayScreen.h"
 #include "SandBoxStage.h"
-
+#include "Vector2D.h"
+#include "BoundaryCollider2D.h"
 GameplayScreen::GameplayScreen(Game* game) 
 {
 	this->game = game;
@@ -12,19 +13,36 @@ void GameplayScreen::Cleanup()
 		stages.back()->Cleanup();
 		stages.pop_back();
 	}
-	playerSprite.free();
+	for (auto entity : entities) {
+		entity->entitySprite->free();
+	}
+	controllers.clear();
+	entities.clear();
+	boxColliders.clear();
+	boundaryColliders.clear();
 }
 
 void GameplayScreen::Init()
 {
+	// Player
 	player = GameObject(200, 150);
+	// Player sprite
 	playerSprite.loadFromFile(game->renderer, "Assets/Textures/KakoIdle.png");
-	entities.push_back(new ScreenRepresentation(&player, &playerSprite));
-	playerCollider = BoxCollider2D(&player, player.x, player.y, playerSprite.getWidth(), playerSprite.getHeight());
-	playerController = PlayerController(&player, nullptr, &playerCollider, 5, 10);
+	// Player representation
+	playerRepresentation = ScreenRepresentation(&player, &playerSprite);
+	entities.push_back(&playerRepresentation);
+	// Player collider
+	playerCollider = BoxCollider2D(&player, player.x, player.y, 80, 139, 0, -10);
+	boxColliders.push_back(&playerCollider);
+	// Player controller
+	playerController = PlayerController(&playerRepresentation, nullptr, &playerCollider, 10, 10);
 	controllers.push_back(&playerController);
-	
 
+
+	// Boundary colliders
+    boundaryColliders.push_back(new BoundaryCollider2D(350, 500, Vector2D(0, 1)));
+
+	// Change stage
 	this->ChangeStage(new SandBoxStage(this));
 }
 
@@ -66,4 +84,5 @@ void GameplayScreen::ChangeStage(GameStage* stage)
 	}
 	stages.push_back(stage);
 	stages.back()->Init();
+
 }

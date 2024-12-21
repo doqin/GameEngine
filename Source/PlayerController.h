@@ -4,6 +4,8 @@
 #include "GameObject.h"
 #include "RigidBody2D.h"
 
+struct ScreenRepresentation;
+
 class PlayerController {
 public:
     PlayerController() {
@@ -15,7 +17,7 @@ public:
 		xDir = 0;
 		jumpForce = 0;
     }
-    PlayerController(GameObject* entity, RigidBody2D* rigidBody = nullptr, 
+    PlayerController(ScreenRepresentation* entity, RigidBody2D* rigidBody = nullptr, 
         BoxCollider2D* boxCollider = nullptr, const float speed = 0, 
         const float jumpForce = -10) {
         player = entity;
@@ -31,7 +33,7 @@ public:
         }
     }
 
-    PlayerController(GameObject* entity, RigidBody2D* rigidBody = nullptr, 
+    PlayerController(ScreenRepresentation* entity, RigidBody2D* rigidBody = nullptr, 
         CircleCollider2D* circleCollider = nullptr, 
         const float speed = 0, const float jumpForce = -10) : boxCollider(nullptr), xDir(0) {
         player = entity;
@@ -53,7 +55,7 @@ public:
     void RollBack(float x, float width);
     RigidBody2D* rigidBody;
 private:
-    GameObject* player;
+    ScreenRepresentation* player;
     BoxCollider2D* boxCollider;
     CircleCollider2D* circleCollider;
     float speed;

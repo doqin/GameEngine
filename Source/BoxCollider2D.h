@@ -16,10 +16,12 @@ public:
 		boxCollider = nullptr;
 		isCollided = false;
     }
-    BoxCollider2D(GameObject* entity, const int x, const int y, const int w, const int h) {
+    BoxCollider2D(GameObject* entity, const int x, const int y, const int w, const int h, const float offsetX = 0, const float offsetY = 0) {
         this->entity = entity;
         boxCollider = new SDL_Rect(x - w / 2, y - w / 2, w, h);
         isCollided = false;
+		this->offsetX = offsetX;
+		this->offsetY = offsetY;
     }
     BoxCollider2D(GameObject* entity, SDL_Rect* boxCollider) {
         this->entity = entity;
@@ -33,5 +35,8 @@ public:
     bool CheckCollision(const BoxCollider2D* collider) const;
     bool CheckCollision(const BoundaryCollider2D* boundaryCollider) const;
     bool isCollided;
+private:
+    float offsetX;
+    float offsetY;
 };
 

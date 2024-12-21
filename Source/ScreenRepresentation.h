@@ -4,6 +4,7 @@
 struct ScreenRepresentation{
 	GameObject* entity;
 	Sprite* entitySprite;
+	bool flipped = false;
 	ScreenRepresentation() {
 		entity = nullptr;
 		entitySprite = nullptr;

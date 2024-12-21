@@ -10,7 +10,7 @@ class BoxCollider2D;
 
 class BoundaryCollider2D {
 public:
-    BoundaryCollider2D(const int x, const int y, const Vector2D normal) {
+    BoundaryCollider2D(int x, int y, Vector2D normal) {
         this->normal = normal;
         this->point.x = x;
         this->point.y = y;

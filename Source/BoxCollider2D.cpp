@@ -22,8 +22,8 @@ bool BoxCollider2D::IsClicked(SDL_Event &e)
 }
 
 void BoxCollider2D::Update() const {
-    boxCollider->x = entity->x - boxCollider->w / 2;
-    boxCollider->y = entity->y - boxCollider->h / 2;
+    boxCollider->x = entity->x - boxCollider->w / 2 - offsetX;
+    boxCollider->y = entity->y - boxCollider->h / 2 - offsetY;
 }
 
 bool BoxCollider2D::CheckCollision(const BoxCollider2D* collider) const {
