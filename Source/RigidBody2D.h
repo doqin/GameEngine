@@ -10,6 +10,7 @@ class RigidBody2D {
 public:
     BoxCollider2D* boxCollider;
     CircleCollider2D* circleCollider;
+    RigidBody2D() = default;
     RigidBody2D(GameObject* entity, BoxCollider2D* boxCollider = nullptr, const float mass = 1) : circleCollider(
         nullptr), jumpForce(0) {
         this->entity = entity;

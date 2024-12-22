@@ -2,6 +2,10 @@
 #include "GameObject.h"
 
 void CircleCollider2D::Update() {
+    if (this == nullptr) {
+		printf("CircleCollider2D is null\n");
+        return;
+    }
     this->x = entity->x;
     this->y = entity->y;
 }
