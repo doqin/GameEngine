@@ -16,6 +16,7 @@ public:
 	PlayerController playerController;
 	ScreenRepresentation playerRepresentation;
 	BoxCollider2D playerCollider;
+	RigidBody2D playerRigidBody;
 
 	// Camera
 	SDL_Rect camera = { 0, 0, 800, 600 };
@@ -37,6 +38,7 @@ public:
 	std::vector<PlayerController*> controllers;
 	std::vector<BoxCollider2D*> boxColliders;
 	std::vector<BoundaryCollider2D*> boundaryColliders;
+	std::vector<RigidBody2D*> rigidBodies;
 private:
 	std::vector<GameStage*> stages;
 };

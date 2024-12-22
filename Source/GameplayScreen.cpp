@@ -32,12 +32,14 @@ void GameplayScreen::Init()
 	playerRepresentation = ScreenRepresentation(&player, &playerSprite);
 	entities.push_back(&playerRepresentation);
 	// Player collider
-	playerCollider = BoxCollider2D(&player, player.x, player.y, 80, 139, 0, -10);
+	playerCollider = BoxCollider2D(&player, player.x, player.y, 20, 139, 0, -10);
 	boxColliders.push_back(&playerCollider);
+	// PLayer rigidbody
+	playerRigidBody = RigidBody2D(&player, &playerCollider, 0.8f);
+	rigidBodies.push_back(&playerRigidBody);
 	// Player controller
-	playerController = PlayerController(&playerRepresentation, nullptr, &playerCollider, 10, 10);
+	playerController = PlayerController(&playerRepresentation, &playerRigidBody, &playerCollider, 10, 15);
 	controllers.push_back(&playerController);
-
 
 	// Boundary colliders
     boundaryColliders.push_back(new BoundaryCollider2D(350, 500, Vector2D(0, 1)));

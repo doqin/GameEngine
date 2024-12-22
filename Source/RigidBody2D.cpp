@@ -20,10 +20,11 @@ void RigidBody2D::Update(const std::vector<BoundaryCollider2D*>& boundaryCollide
             }
         }
         for (const BoxCollider2D* collider : boxColliders) {
-            if (boxCollider->CheckCollision(collider)) {
-                this->RollBack(collider->boxCollider->y, collider->boxCollider->h);
-                boxCollider->Update();
-            }
+			if (collider != boxCollider)
+                if (boxCollider->CheckCollision(collider)) {
+                    this->RollBack(collider->boxCollider->y, collider->boxCollider->h);
+                    boxCollider->Update();
+                }
         }
     }
     else if (circleCollider) {
